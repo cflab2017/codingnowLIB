@@ -27,9 +27,9 @@ void rgb_off(void)
 unsigned char* color(unsigned char r, unsigned char g, unsigned char b)
 {
   static unsigned char ret_color[3];
-  ret_color[0] = 255;
-  ret_color[1] = 0;
-  ret_color[2] = 0;
+  ret_color[0] = r;
+  ret_color[1] = g;
+  ret_color[2] = b;
   return ret_color;
 }
 
