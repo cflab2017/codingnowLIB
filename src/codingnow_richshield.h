@@ -14,4 +14,5 @@
 
 void init_RichShiled_cg(void);
 int get_ir_data(void);
+unsigned char get_read_button(unsigned char idex, unsigned char force =0, unsigned int press_time = 100);
 #endif

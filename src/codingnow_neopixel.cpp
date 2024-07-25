@@ -5,6 +5,8 @@
 Adafruit_NeoPixel pixels(NUMPIXELS, NEO_PIN, NEO_GRB + NEO_KHZ800);
 
 
+
+
 void init_nenopixel_cg(unsigned char pin, unsigned char num,unsigned char brightness)
 {
 
@@ -34,8 +36,20 @@ unsigned char* color(unsigned char r, unsigned char g, unsigned char b)
 }
 
 
-void rgb_set(int idex, unsigned char *rgb)
+void rgb_set(int idex, unsigned char *rgb, unsigned char isShow)
 {
   pixels.setPixelColor(idex, pixels.Color(rgb[0], rgb[1], rgb[2]));
+  if(isShow){
+    pixels.show();
+  }  
+}
+void rgb_clear()
+{
+  pixels.clear();
+}
+void rgb_show()
+{
   pixels.show();
 }
+
+
