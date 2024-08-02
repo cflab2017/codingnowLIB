@@ -43,6 +43,59 @@ B01000010,
 B00100100,
 B00011000,
 };
+
+unsigned char rgb_arr_1[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00001000,
+B00011000,
+B00001000,
+B00001000,
+B00011100,
+B00000000,
+};
+
+unsigned char rgb_arr_2[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00111100,
+B00000100,
+B00111100,
+B00100000,
+B00111100,
+B00000000,
+};
+unsigned char rgb_arr_3[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00111100,
+B00000100,
+B00111100,
+B00000100,
+B00111100,
+B00000000,
+};
+unsigned char rgb_arr_4[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00101000,
+B00101000,
+B00111100,
+B00001000,
+B00001000,
+B00000000,
+};
+unsigned char rgb_arr_5[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00111100,
+B00100000,
+B00111100,
+B00000100,
+B00111100,
+B00000000,
+};
+
 void draw_arry(unsigned char idex,unsigned char r, unsigned char g, unsigned char b)
 {
     unsigned char* buff;
@@ -65,14 +118,30 @@ void draw_arry(unsigned char idex,unsigned char r, unsigned char g, unsigned cha
             buff = rgb_arr_heart;
             break;
         }
+        case 4:{
+            buff = rgb_arr_1;
+            break;
+        }
+        case 5:{
+            buff = rgb_arr_2;
+            break;
+        }
+        case 6:{
+            buff = rgb_arr_3;
+            break;
+        }
+        case 7:{
+            buff = rgb_arr_4;
+            break;
+        }
     }
     rgb_clear();
     for(int i=0; i<RGB_ARR_MAX; i++)
     {
-        for(int k=0; k<8; k++)
+        for(int k=7; k>-1; k--)
         {
             if(buff[i]&(0x01<<k)){
-                rgb_set((i*8)+k,   color(r, g,b), 0);
+                rgb_set((i*8)+(7-k),   color(r, g,b), 0);
             }
         }      
     }
