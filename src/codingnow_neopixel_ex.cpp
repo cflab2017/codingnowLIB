@@ -44,6 +44,16 @@ B00100100,
 B00011000,
 };
 
+unsigned char rgb_arr_0[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00111100,
+B00100100,
+B00100100,
+B00100100,
+B00111100,
+B00000000,
+};
 unsigned char rgb_arr_1[RGB_ARR_MAX] = {
 B00000000,
 B00000000,
@@ -95,45 +105,67 @@ B00000100,
 B00111100,
 B00000000,
 };
-
+unsigned char rgb_arr_6[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00111100,
+B00100000,
+B00111100,
+B00100100,
+B00111100,
+B00000000,
+};
+unsigned char rgb_arr_7[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00111100,
+B00100100,
+B00000100,
+B00000100,
+B00000100,
+B00000000,
+};
+unsigned char rgb_arr_8[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00111100,
+B00100100,
+B00111100,
+B00100100,
+B00111100,
+B00000000,
+};
+unsigned char rgb_arr_9[RGB_ARR_MAX] = {
+B00000000,
+B00000000,
+B00111100,
+B00100100,
+B00111100,
+B00000100,
+B00000100,
+B00000000,
+};
 void draw_arry(unsigned char idex,unsigned char r, unsigned char g, unsigned char b)
 {
     unsigned char* buff;
     switch(idex)
     {
         default:
-        case 0:{
-            buff = rgb_arr_side;
-            break;
-        }
-        case 1:{
-            buff = rgb_arr_x;
-            break;
-        }
-        case 2:{
-            buff = rgb_arr_o;
-            break;
-        }
-        case 3:{
-            buff = rgb_arr_heart;
-            break;
-        }
-        case 4:{
-            buff = rgb_arr_1;
-            break;
-        }
-        case 5:{
-            buff = rgb_arr_2;
-            break;
-        }
-        case 6:{
-            buff = rgb_arr_3;
-            break;
-        }
-        case 7:{
-            buff = rgb_arr_4;
-            break;
-        }
+        case 0:{buff = rgb_arr_0;break;}
+        case 1:{buff = rgb_arr_1;break;}
+        case 2:{buff = rgb_arr_2;break;}
+        case 3:{buff = rgb_arr_3;break;}
+        case 4:{buff = rgb_arr_4;break;}
+        case 5:{buff = rgb_arr_5;break;}
+        case 6:{buff = rgb_arr_6;break;}
+        case 7:{buff = rgb_arr_7;break;}
+        case 8:{buff = rgb_arr_8;break;}
+        case 9:{buff = rgb_arr_9;break;}
+
+        case 10:{buff = rgb_arr_side;break;}
+        case 11:{buff = rgb_arr_x;break;}
+        case 12:{buff = rgb_arr_o;break;}
+        case 13:{buff = rgb_arr_heart;break;}
     }
     rgb_clear();
     for(int i=0; i<RGB_ARR_MAX; i++)
