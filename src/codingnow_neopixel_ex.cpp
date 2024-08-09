@@ -189,7 +189,15 @@ char rgb_arry_side[RGB_LED_SIDE_MAX] = {
 63,62,61,60,59,58,57,56,
 48,40,32,24,16,8,
 };
-void ex_cycle(void)
+void ex_cycle_off(void)
+{   
+    for(int i=0; i< RGB_LED_SIDE_MAX;i++)
+    {
+      rgb_set(rgb_arry_side[i],   color(0,  0,  0));
+      delay(100);
+    }  
+}
+void ex_cycle_on(void)
 {
     rgb_off();
     for(int i=0; i< RGB_LED_SIDE_MAX;i++)
@@ -197,11 +205,6 @@ void ex_cycle(void)
       rgb_set(rgb_arry_side[i],   color(0,  150,  150));
       delay(100);
     }    
-    for(int i=0; i< RGB_LED_SIDE_MAX;i++)
-    {
-      rgb_set(rgb_arry_side[i],   color(0,  0,  0));
-      delay(100);
-    }  
 }
 
 /*-----------------------------------------------------------*/
