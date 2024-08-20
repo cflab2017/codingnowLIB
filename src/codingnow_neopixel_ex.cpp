@@ -145,6 +145,42 @@ B00000100,
 B00000100,
 B00000000,
 };
+
+#define RGB_LED_MAX_HEART_01 18
+char rgb_arry_heart01[RGB_LED_MAX_HEART_01] = {
+9,10,13,14,16,19,20,23,24,31,
+32,39,41,46,50,53,59,60,
+};
+
+#define RGB_LED_MAX_HEART_02 14
+char rgb_arry__heart02[RGB_LED_MAX_HEART_02] = {
+17,18,21,22,25,27,28,30,33,38,
+42,45,51,52,
+};
+#define RGB_LED_MAX_HEART_03 8
+char rgb_arry__heart03[RGB_LED_MAX_HEART_03] = {
+26,29,34,35,36,37,43,44,
+};
+
+
+#define RGB_LED_MAX_MAN_01 17
+char rgb_arry_man01[RGB_LED_MAX_MAN_01] = {
+3,10,12,19,24,25,26,27,28,29,30,
+35,43,50,52,57,61,
+};
+
+#define RGB_LED_MAX_MAN_02 17
+char rgb_arry_man01[RGB_LED_MAX_MAN_02] = {
+3,8,10,12,14,17,19,21,26,27,28,
+35,43,50,52,57,61,
+};
+
+#define RGB_LED_MAX_MAN_03 17
+char rgb_arry_man01[RGB_LED_MAX_MAN_03] = {
+3,10,12,19,26,27,28,33,35,37,
+40,43,46,50,52,57,61,
+};
+
 void draw_arry(unsigned char idex,unsigned char r, unsigned char g, unsigned char b)
 {
     unsigned char* buff;
