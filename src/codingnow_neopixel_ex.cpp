@@ -170,13 +170,13 @@ char rgb_arry_man01[RGB_LED_MAX_MAN_01] = {
 };
 
 #define RGB_LED_MAX_MAN_02 17
-char rgb_arry_man01[RGB_LED_MAX_MAN_02] = {
+char rgb_arry_man02[RGB_LED_MAX_MAN_02] = {
 3,8,10,12,14,17,19,21,26,27,28,
 35,43,50,52,57,61,
 };
 
 #define RGB_LED_MAX_MAN_03 17
-char rgb_arry_man01[RGB_LED_MAX_MAN_03] = {
+char rgb_arry_man03[RGB_LED_MAX_MAN_03] = {
 3,10,12,19,26,27,28,33,35,37,
 40,43,46,50,52,57,61,
 };
